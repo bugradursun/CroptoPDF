@@ -4,7 +4,7 @@ from datetime import datetime
 
 today_date = datetime.today().strftime("%d %b, %Y")
 today_month = datetime.today().strftime("%B")
-
+//extraction
 islem_tarihi = today_date
 duzenleme_tarihi =today_month
 belge_no = "234"
