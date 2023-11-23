@@ -12,13 +12,12 @@ from extractLayout import veriler1
 data1=veriler1
 context = data1
 
- 
 template_loader = jinja2.FileSystemLoader('./')
 template_env = jinja2.Environment(loader = template_loader)
 
-html_template = 'reserveFinal.html'
+html_template = 'yenihtmldevamet.html' #reserveFinalLastday.html
 template = template_env.get_template(html_template)
 output_text = template.render(context)
 
 config = pdfkit.configuration(wkhtmltopdf = "C:/Program Files/wkhtmltopdf/bin/wkhtmltopdf.exe")
-pdfkit.from_string(output_text,'SonDeneme6.pdf',configuration=config,css="reserve.css")
+pdfkit.from_string(output_text,'FormatYenilendi3.pdf',configuration=config,css="reserve.css")
