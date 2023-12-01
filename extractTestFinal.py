@@ -15,9 +15,9 @@ context = data1
 template_loader = jinja2.FileSystemLoader('./')
 template_env = jinja2.Environment(loader = template_loader)
 
-html_template = 'yenihtmldevamet.html' #reserveFinalLastday.html
+html_template = '26kasimdene.html' #reserveFinalLastday.html #en gunceli yenihtmldevamet.html KULLAN !!
 template = template_env.get_template(html_template)
 output_text = template.render(context)
 
 config = pdfkit.configuration(wkhtmltopdf = "C:/Program Files/wkhtmltopdf/bin/wkhtmltopdf.exe")
-pdfkit.from_string(output_text,'FormatYenilendi3.pdf',configuration=config,css="reserve.css")
+pdfkit.from_string(output_text,'26KasimDeneme11.pdf',configuration=config,css="style1.css",options={"enable-local-file-access": ""})
